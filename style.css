@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+#main{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: salmon; */
+}
+
+#main #left{
+  height: 100%;
+  width: 50%;
+  /* background-color: royalblue; */
+  position: relative;
+  overflow: hidden;
+
+}
+#main #right{
+  
+  height: 100%;
+  width: 50%;
+  /* background-color: yellow; */
+  position: relative;
+}
+
+#nav{
+  height: 100px;
+  width: 100%;
+  /* background-color: salmon; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  position: relative;
+  z-index: 999;
+  color: #fff;
+  opacity: 0;
+  animation-name: bc;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#nav h1{
+  font-family: ogg;
+  text-transform: uppercase;
+  font-size: 20px;
+
+
+}
+#nav i{
+  font-size: 20px;
+}
+
+#left img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  animation-name: roti;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+#left>h1{
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  color: #fff;
+  z-index: 99;
+  font-size: 80px;
+  opacity: 0;
+ /* font-family: Anurati; */
+ font-family: voyage;
+  text-align: right;
+  line-height:78px;
+  animation-name: abc;
+  animation-duration: 1s;
+   /* animation-iteration-count: infinite;  */
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+#img1{
+  position: absolute;
+  height: 190px;
+  width: 160px;
+  object-fit: cover;
+  left: 40%;
+  transform: translate(-50%,0);
+  animation-name: move;
+  animation-duration: 1s;
+  /* animation-iteration-count: infinite;  */
+  animation-fill-mode: forwards;
+
+}
+#img2{
+  position: absolute;
+  height: 290px;
+  width: 220px;
+  object-fit: cover;
+  top: 35%;
+  left: 10%;
+  transform: translate(0%,-50%);
+  animation-name: move;
+  animation-duration: 1s;
+   /* animation-iteration-count: infinite;  */
+
+  animation-fill-mode: forwards;
+
+}
+#img3{
+  position: absolute;
+  height: 190px;
+  width: 160px;
+  object-fit: cover;
+   left: 50%; 
+  bottom: 0;
+  transform: translate(-50%,0);
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+}
+
+#right>h1{
+  font-size: 50px;
+  position: absolute;
+  font-family: voyage;
+  rotate: -90deg;
+  right: -14%;
+  top: 24%;
+
+  animation-name: ac;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+#overlay{
+  width: 100%;
+  height: 100%;
+  background-color: salmon;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes move {
+  0%{
+    /* right: -40%; */
+    transform: translateX(100%);
+    opacity: 0;
+
+  }
+  100%{
+    /* right: 3%; */
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes roti {
+  0%{
+    transform: rotate(30deg) scale(1.4);
+    opacity: 0;
+  }
+  100%{
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes abc {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bc {
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ac {
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
